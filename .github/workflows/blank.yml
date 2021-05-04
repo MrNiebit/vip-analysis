@@ -6,7 +6,8 @@ name: vip
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: master
+    branches:
+    - master
   pull_request:
     branches: master
 
@@ -31,7 +32,7 @@ jobs:
           npm install
           npm run build
       # Runs a set of commands using the runners shell
-      - name: james
+      - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.1
         env: 
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
