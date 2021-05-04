@@ -1,5 +1,7 @@
 # mgtv-player
 
+## 仅限学习使用
+
 ## Project setup
 ```
 npm install
