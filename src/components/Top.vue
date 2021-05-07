@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import request from "@/request/request";
+// import request from "@/request/request";
 
 export default {
   name: "top",
@@ -40,14 +40,9 @@ export default {
   methods: {
     getData () {
       console.log('开始解析');
-      request({
-        url: '/api/mgtv',
-        params: {
-          url: this.input
-        },
-      }).then(res => {
-        this.$store.dispatch('changeInfo', res.data)
-        console.log(res.data)
+      this.$jsonp('http://api.lacknb.cn/mgtv?url=' + this.input).then(res => {
+        console.log(res)
+        this.$store.dispatch('changeInfo', res)
       }).catch(err => {
         this.$message(err.message)
       })

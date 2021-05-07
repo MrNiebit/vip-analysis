@@ -36,3 +36,9 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ```js
     base: '/vip-analysis'
 ```
+
+request.js
+
+```js
+        baseURL: '/vip-analysis',
+```

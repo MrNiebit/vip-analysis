@@ -1,3 +1,4 @@
+
 module.exports = {
         outputDir: 'dist',
         publicPath: process.env.NODE_ENV === 'production' ? '/vip-analysis' : '/',
@@ -5,11 +6,11 @@ module.exports = {
         productionSourceMap: false,
         devServer: {
         proxy: {
-            '/api': {
+            "/api": {
                 target: 'http://api.lacknb.cn', //目标接口域名
                 changeOrigin: true, //是否跨域
-                pathRewrite: {
-                    '^/api': '/' //重写接口
+                "^/api": {
+                    rewritePath: '/' //重写接口
                 }
                 /*
                 这里理解成用‘/api’代替target里面的地址，
