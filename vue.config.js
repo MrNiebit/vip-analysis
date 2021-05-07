@@ -1,6 +1,8 @@
 module.exports = {
         outputDir: 'dist',
         publicPath: process.env.NODE_ENV === 'production' ? '/vip-analysis' : '/',
+        // 不打包 map文件
+        productionSourceMap: false,
         devServer: {
         proxy: {
             '/api': {

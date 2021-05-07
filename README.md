@@ -24,3 +24,15 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## 部署问题
+
+```js
+        publicPath: process.env.NODE_ENV === 'production' ? '/vip-analysis' : '/',
+```
+
+路由的base
+
+```js
+    base: '/vip-analysis'
+```

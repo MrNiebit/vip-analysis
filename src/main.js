@@ -10,9 +10,15 @@ import {Routes} from './route/routes'
 Vue.config.productionTip = false
 Vue.use(ElementUI)
 Vue.use(VueRouter)
+
+/**
+ * 如果不加base了话，使用history模式，打包后，会出现空白页面的情况
+ * 所以这里要加上base
+ */
 const router = new VueRouter({
     routes: Routes,
-    mode: 'history'
+    mode: 'history',
+    base: '/vip-analysis'
 })
 window.Hls = require('hls.js')
 
