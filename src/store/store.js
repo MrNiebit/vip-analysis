@@ -19,7 +19,8 @@ export default new Vuex.Store({
         },
         changeInfo(state, res) {
             const data = {}
-            data.url = res.m3u8.replace("http", "https") + '&reset=0'
+            let m3u8 = res.m3u8.replace("http", "https")
+            data.url = m3u8 + '&reset=0'
             data.pic = res.info.pic
             document.title = res.info.title
             console.log('current video : ' + data.type)
