@@ -1,6 +1,6 @@
 module.exports = {
         outputDir: 'dist',
-        publicPath: process.env.NODE_ENV === 'production' ? '/vip-/analysis' : '/',
+        publicPath: process.env.NODE_ENV === 'production' ? '/vip-analysis' : '/',
         devServer: {
         proxy: {
             '/api': {
