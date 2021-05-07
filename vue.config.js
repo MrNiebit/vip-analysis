@@ -1,6 +1,7 @@
 module.exports = {
-    publicPath: './',
-    devServer: {
+        outputDir: 'dist',
+        publicPath: process.env.NODE_ENV === 'production' ? '/vip-/analysis' : '/',
+        devServer: {
         proxy: {
             '/api': {
                 target: 'http://api.lacknb.cn', //目标接口域名
