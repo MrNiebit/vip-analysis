@@ -2,7 +2,7 @@
   "name": "mgtv-player",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://mrniebit.github.io/vip-analysis",
+  "homepage": "https://mrniebit.github.io/vip-analysis/",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
