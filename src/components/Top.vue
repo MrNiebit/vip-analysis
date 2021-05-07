@@ -40,7 +40,7 @@ export default {
   methods: {
     getData () {
       console.log('开始解析');
-      this.$jsonp('http://api.lacknb.cn/mgtv?url=' + this.input).then(res => {
+      this.$jsonp('https://api.lacknb.cn/mgtv?url=' + this.input).then(res => {
         console.log(res)
         this.$store.dispatch('changeInfo', res)
       }).catch(err => {
