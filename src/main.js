@@ -20,7 +20,7 @@ Vue.use(VueJsonp)
  */
 const router = new VueRouter({
     routes: Routes,
-    mode: 'history',
+    // mode: 'history',
     base: '/vip-analysis'
 })
 window.Hls = require('hls.js')
