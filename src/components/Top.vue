@@ -25,7 +25,9 @@
 </template>
 
 <script>
-// import request from "@/request/request";
+import request from "@/request/request";
+// axios中包含qs，所以不需要再单独安装了，qs.stringify(json) 将json数据转换成键值对的字符串，即表单数据的格式。
+import qs from 'qs'
 
 export default {
   name: "top",
@@ -38,14 +40,31 @@ export default {
     }
   },
   methods: {
+    // getData () {
+    //   console.log('开始解析');
+    //   this.$jsonp('https://api.lacknb.cn/mgtv?url=' + this.input).then(res => {
+    //     console.log(res)
+    //     this.$store.dispatch('changeInfo', res)
+    //   }).catch(err => {
+    //     this.$message(err.message)
+    //   })
+    // },
     getData () {
-      console.log('开始解析');
-      this.$jsonp('https://api.lacknb.cn/mgtv?url=' + this.input).then(res => {
-        console.log(res)
-        this.$store.dispatch('changeInfo', res)
-      }).catch(err => {
-        this.$message(err.message)
-      })
+        request({
+            url: '/mgtv',
+            method: 'POST',
+            data: qs.stringify({"url": this.input}),
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            }
+        
+        }).then(res => {
+            let data = res.data
+            console.log(data)
+            this.$store.dispatch('changeInfo', data)
+        }).catch(err => {
+            this.$message(err.message)
+        })
     }
   }
 }
