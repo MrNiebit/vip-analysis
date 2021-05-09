@@ -25,6 +25,10 @@ npm run lint
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
+## 播放器请求路径
+
+[https://mrniebit.github.io/vip-analysis/play?url=xxx](https://mrniebit.github.io/vip-analysis/play?url=xxx)
+
 ## 部署问题
 
 ```js
