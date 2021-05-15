@@ -63,8 +63,11 @@ export default {
     }
   },
   created() {
-    console.log(this.$route.query.url)
-    this.options.video.url = this.$route.query.url;
+    console.log("route data: " + this.$route.query.url)
+    // let url = location.href.split("url=")[1];
+    // console.log("url: " + url)
+    // this.options.video.url = url;
+    this.options.video.url = this.$route.query.url
   },
   computed: {
   },

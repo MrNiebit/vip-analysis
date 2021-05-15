@@ -19,7 +19,10 @@ export default new Vuex.Store({
         },
         changeInfo(state, res) {
             const data = {}
-            let m3u8 = res.m3u8.replace("http", "https")
+            let m3u8 = res.m3u8;
+            if (m3u8.indexOf('https') == -1) {
+                m3u8 = m3u8.replace("http", "https")
+            }
             data.url = m3u8 + '&reset=0'
             data.pic = res.info.pic
             document.title = res.info.title
