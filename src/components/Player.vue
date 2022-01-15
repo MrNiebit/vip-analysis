@@ -30,7 +30,7 @@ export default {
           url: '111',
           pic: ''
         },
-        autoplay: false,
+        autoplay: true,
         contextmenu: [
           {
             text: 'GitHub',
@@ -64,10 +64,11 @@ export default {
   },
   created() {
     console.log("route data: " + this.$route.query.url)
-    // let url = location.href.split("url=")[1];
-    // console.log("url: " + url)
-    // this.options.video.url = url;
-    this.options.video.url = this.$route.query.url
+    let url = location.href.split("url=")[1];
+    url = decodeURIComponent(url);
+    console.log("url: " + url)
+    this.options.video.url = url;
+    // this.options.video.url = this.$route.query.url
   },
   computed: {
   },
@@ -80,39 +81,11 @@ export default {
 </script>
 
 <style scoped>
-body {
-  margin: 0;
-  padding: 0;
-  text-align: center;
+* {
+    padding: 0;
+    margin: 0;
 }
-a {
-  color: #42b983;
-  text-decoration: none;
-}
-.dplayer {
-  width: 800px;
-  margin: 50px auto;
-}
-h1 {
-  font-size: 54px;
-  color: #42b983;
-  margin: 30px 0 10px;
-}
-h2 {
-  font-size: 22px;
-  color: #555;
-}
-@media (max-width: 768px) {
-  .dplayer {
-    width: 90%;
-  }
-  h1 {
-    font-size: 30px;
-  }
-  h2 {
-    font-size: 16px;
-  }
-}
+
 </style>
 
 <!--
