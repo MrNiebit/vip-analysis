@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <d-player @play="playVideo" :options="options" ref="player">
+  <div style="width: 100%; height: 100%">
+    <d-player @play="playVideo" :options="options" ref="player" >
 <!--      https://www.mgtv.com/b/348145/11564191.html?lastp=list_index-->
     </d-player>
   </div>
@@ -28,8 +28,11 @@ export default {
         video: {
           type: 'auto',
           url: '111',
-          pic: ''
+          pic: 'https://w.wallhaven.cc/full/5d/wallhaven-5djkz5.jpg'
         },
+        preload: 'auto',
+        hotkey: true,
+        screenshot: true,
         autoplay: true,
         contextmenu: [
           {
@@ -80,11 +83,7 @@ export default {
 }
 </script>
 
-<style scoped>
-* {
-    padding: 0;
-    margin: 0;
-}
+<style>
 
 </style>
 
