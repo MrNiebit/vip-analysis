@@ -30,6 +30,12 @@ export default {
           url: '111',
           pic: 'https://w.wallhaven.cc/full/5d/wallhaven-5djkz5.jpg'
         },
+        hlsjsConfig: {
+            p2pConfig: {
+                logLevel: true,
+                live: false,
+            }
+        },
         preload: 'auto',
         hotkey: true,
         screenshot: true,
