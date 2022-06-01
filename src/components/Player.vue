@@ -28,7 +28,7 @@ export default {
         video: {
           type: 'auto',
           url: '111',
-          pic: 'https://w.wallhaven.cc/full/5d/wallhaven-5djkz5.jpg'
+          pic: 'https://p.upyun.com/demo/tmp/ozUwnELl.webp'
         },
         hlsjsConfig: {
             p2pConfig: {
